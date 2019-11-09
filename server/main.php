@@ -14,19 +14,22 @@
 }
 </style>
 <html>
-<body>
+<body style="max-width:1200px; margin: auto">
 
 <div class="content" style="text-align: center">
 	<h1>pyLearner</h1>
-	<button onclick="myFunction()">Try it</button>
+	<div id="stuff"></div>
 </div>
 
 <script>
 function myFunction() {
 	var myCodeMirror = CodeMirror(document.body, {
-	  value: "def newFunction():\n",
 	  mode:  "python",
-	  indentUnit: "4"
+	  indentUnit: "4",
+	  lineNumbers: true,
+	  indentWithTabs: true,
+	  smartIndent: false,
+	  electricTabs: false
 	});
 }
 
@@ -36,6 +39,10 @@ myFunction();
 <?php
 ?>
 
+<div class="content" style="text-align: center">
+	<br><br>
+	<button class="btn btn-success">Try it</button>
+</div>
 
 </body>
 </html>
