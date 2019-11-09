@@ -12,27 +12,34 @@
   }
 </style>
 <html>
-  <body>
-    <div class="content" style="text-align: center">
-      <h1>pyLearner</h1>
-      <button onclick="myFunction()">Try it</button>
-    </div>
+  <body style="max-width:1200px; margin: auto">
 
-    <script>
-      function myFunction() {
-        var myCodeMirror = CodeMirror(document.body, {
-          value: "def newFunction():\n",
-          mode:  "python",
-          indentUnit: "4"
-        });
-      }
+  <div class="content" style="text-align: center">
+    <h1>pyLearner</h1>
+    <div id="stuff"></div>
+  </div>
 
-      myFunction();
-    </script>
+  <script>
+    function myFunction() {
+      var myCodeMirror = CodeMirror(document.body, {
+        mode:  "python",
+        indentUnit: "4",
+        lineNumbers: true,
+        indentWithTabs: true,
+        smartIndent: false,
+        electricTabs: false
+      });
+    }
+    myFunction();
+  </script>
 
-    <?php
-    ?>
-
+  <?php
+  ?>
+  
+  <div class="content" style="text-align: center">
+    <br><br>
+    <button class="btn btn-success">Try it</button>
+  </div>
 
   </body>
 </html>
