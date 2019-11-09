@@ -14,9 +14,11 @@
 <html>
   <body style="max-width:1200px; margin: auto">
 
-  <div class="content" style="text-align: center">
+  <div class="content" id="content" style="text-align: center">
     <h1>pyLearner</h1>
-    <div id="stuff"></div>
+    <form name="editor" method="POST" action="main.php">
+      <input type="submit" id="submitCode" name="submitCode" value="Try It">
+    </form>
   </div>
 
   <script>
@@ -34,12 +36,8 @@
   </script>
 
   <?php
+    $pythonCode=$_POST["pythonCode"];
+    print($pythonCode);
   ?>
-  
-  <div class="content" style="text-align: center">
-    <br><br>
-    <button class="btn btn-success">Try it</button>
-  </div>
-
   </body>
 </html>
