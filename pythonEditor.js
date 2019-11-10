@@ -16,12 +16,16 @@ $(() => {
     window.myCodeMirror.save()
     var code = { code: window.myCodeMirror.getValue() }
     postCode(code)
-    // console.log(window.myCodeMirror.getValue())
+    console.log(code.code)
   })
 })
 
 postCode = (code) => {
-  $.post('http://localhost:3000/code', code)
+  // Live
+  $.post('http://104.211.7.172:3000/code', code)
+  // Local
+  // $.post('http://localhost:3000/code', code)
+
 }
 
 
