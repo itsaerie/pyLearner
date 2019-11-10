@@ -1,0 +1,12 @@
+<h2>Lesson 2: List Methods</h2>
+<p>In addition to the primitive things we can do with lists, we also have access to a number of list methods. These are like the python functions we mentioned earlier like <code>sum</code>, but they are called <em>on</em> the list rather than <em>given</em> it, like as follows:</p>
+<p><code>[1, 2, 3, 4].append(5)</code></p>
+<p>Intuitively, the append method adds the given value to the end of the list it was called on. Some other methods we employ are <code>.count()</code> which returns the amount of times a given value shows up in a list, <code>.index()</code> which returns the earlier occurrence of a given value, <code>.pop()</code> which removes the last item and returns it, <code>.remove()</code> which removes the first occurrence of a given value from a list, <code>.reverse()</code> which reverses the order of the list, and <code>.sort()</code> which sorts the list in ascending order.</p>
+<p>All of these list methods must be called <em>after</em> the list object, and must also be preceded by the dot operator. They cannot be called by themselves like <code>len()</code>, they must be done to a list.</p>
+<p>You may also have noticed that many of these list methods modify the actual content of the list. When we discussed strings earlier, we noted that strings are immutable, or impossible to change, and the only way to really modify them was to create copies of them. This isn't true for lists; any changes we make to lists will actually apply to them as expected.</p>
+<h2>Task</h2>
+<p>Write a function <code>listSwap</code> that takes a list <code>items</code>, sorts it, reverses it, pops and prints the last element, and then prints the number of times lowercase <code>a</code> is present in the list.</p>
+<h4>Sample Input 0</h4>
+<p><code>listSwap(['e', 'c', 'd', 'a', 'b'])</code></p>
+<h4>Sample Output 0</h4>
+<p><code>a<br />0</code></p>
