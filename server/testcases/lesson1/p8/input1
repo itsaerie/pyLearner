@@ -1,0 +1,1 @@
+concatIn('abc', 'def', 'qwerty')
