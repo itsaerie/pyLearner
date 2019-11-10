@@ -13,7 +13,7 @@
   }
 </style>
 <html>
-  <body style="margin: auto" id="lesson" name="lesson1">
+  <body style="margin: auto; background:#e9eff6" id="lesson" name="lesson1">
     <script> 
       $(() => {
         $("#navbar").load("../navbar.html"); 
@@ -34,6 +34,10 @@
       <br><br>
       <button class="btn btn-success" id="submitCode">Submit</button>
     </div>
+
+    <br><br>
+    <h3 id="results" style="margin-left:10%">Results:</h3>
+    <div id="solution" style="height:100px; border: 2px solid black; border-radius:20px; width: 80%; margin: 0 auto; background:#fefec8"></div>
     <script src="../../pythonEditor.js"></script>
   </body> 
 </html>
