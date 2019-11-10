@@ -1,11 +1,11 @@
 var express = require('express')
 var bodyParser = require('body-parser')
-var http = require('http').Server(app)
-var io = require('socket.io')(http)
 var fs = require('fs')
 var shelljs = require('shelljs')
+var app = express()
+var http = require('http').Server(app)
+var io = require('socket.io')(http)
 
-var app = express();
 var PORT = 10000;
 
 app.use('/', express.static(__dirname))
@@ -22,18 +22,27 @@ app.use((req, res, next) => {
 app.post('/code', async (req, res) => {
   try {
     var code = req.body
-    var file = `server/submissions/${code.lesson}/test_${code.problem}.py`
-    fs.writeFile(file, code.code, (err) => {
-      if (err) {
-         return console.error(err);
-      } else {
-        console.log("Write Successful")
-        // $1 = filename $2 = lesson directory
-        var script = `bash compiler.sh ${code.problem} ${code.lesson}`
-        shelljs.exec(script)
-      }
-    });
+    var file = `server/submissions/${code.lesson}/${code.problem}.py`
+    var output = `import sys
+${code.code}
+
+eval(sys.argv[1].strip())
+
+    `
     res.sendStatus(200)
+    fs.writeFile(file, output, (err) => { 
+      runBash(code, err).then( () => {
+        fs.readFile(`server/submissions/${code.lesson}/answers`, "utf8", (error, data) => {
+          if (error) {
+            return console.error(error)
+          } else {
+            io.emit("results", data)
+          }
+        })})
+        .catch( (error) => {
+          return console.error(error)
+        })
+    })
   } catch (error) {
     res.sendStatus(500)
     return console.error(error)
@@ -42,6 +51,16 @@ app.post('/code', async (req, res) => {
   }
 })
 
-app.listen(PORT, () => {
-  console.log('Server PORT:', PORT)
-});
+const runBash = async (code, err) => {
+  if (err) {
+    return console.error(err)
+  } else {
+    console.log("Write Successful")
+    var script = `bash compiler.sh ${code.problem} ${code.lesson}`
+    shelljs.exec(script)
+  }
+}
+
+var server = http.listen(PORT, () => {
+  console.log('Server PORT:', server.address().port)
+})

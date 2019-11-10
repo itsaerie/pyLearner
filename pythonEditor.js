@@ -1,3 +1,10 @@
+var socket = io()
+const update = (data) => {
+  console.log(data)
+  $("#solution").text(data)
+}
+socket.on('results', update)
+
 var myCodeMirror
 const createEditor = () => {
   window.myCodeMirror = CodeMirror.fromTextArea(document.getElementById("pythonCode"), {
@@ -8,16 +15,16 @@ const createEditor = () => {
     smartIndent: false,
     electricTabs: false,
   })
-  $("#solution").hide()
   $("#results").hide()
+  $("#solution").hide()
 }
 createEditor()
 
 $(() => {
   $("#submitCode").click(()=>{
     window.myCodeMirror.save()
-    $("#solution").show()
     $("#results").show()
+    $("#solution").show()
     var code = { lesson: $("#lesson").attr("name"), problem: $("#problem").attr("name") , code: window.myCodeMirror.getValue() }
     postCode(code)
     console.log(code)

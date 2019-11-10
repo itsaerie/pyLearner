@@ -1,6 +1,6 @@
 import sys
-def sayHello():
-	print("Hello, World!")
+def advOperators(num1, num2):
+
 
 eval(sys.argv[1].strip())
 
