@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<script src="../codemirror/lib/codemirror.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="../codemirror/mode/python/python.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<body style="text-align:center; background:#e9eff6; margin: 0 auto">
+<script> 
+  $(function(){
+    $("#navbar").load("navbar.html"); 
+  });
+</script> 
+
+<div id="navbar"></div>
+
+<h1>Creators</h1>
+<div style="width:80%; margin: 0 auto">David Ang, Matt Antony, Simon Lam, Camilo Ortillo</div>
+
+<br><br>
+
+
+<h1>Inspiration</h1>
+<div style="width:80%; margin: 0 auto">Several of us are Classroom Assistants for CS100, by far the biggest computing course on our campus at NJIT. After all having worked with this class for over a year, we all noticed that students often struggle to keep up despite the extensive support system in place. The course does its best to aid these students by offering tutoring at all hours of the day and offering close guidance, but some students still do not find this to be enough. In some cases they may have trouble following along with the lecture; others may work during the day and are unable to attend any of the tutoring sessions; others yet simply need more practice before the concepts finally sink in. There are some materials online that may satisfy this demand , but all of these contain inconsistencies with the curriculum of the CS100 class, and students who learn things a different way than what the course requires consistently run into problems down the road. The aim of pyLearner is to provide an all-in-one stop for addressing these issues - not only does pyLearner offer a comprehensive guide to each lecture, each topic comes with practice questions that have hidden test cases and are formatted specifically to prepare students to succeed in CS100.</div>
+
+<br><br>
+
+<h1>What it does</h1>
+<div style="width:80%; margin: 0 auto">pyLearner aims to split up the entire curriculum of CS100 into lectures, and further again into more digestible lessons. Each lesson comes with a key concept of python explained in an articulate and brief blurb, followed by a small coding challenge that has the user utilize the skill they just picked up. These coding challenges come with hidden test cases, informing the user how many of the cases they passed out of the possible pool but not revealing any information about what exactly went wrong, forcing the user to think critically and also fostering a desire to get it right. The code itself is typed using an in-browser code editor directly in the site, and submitted and graded automatically with the click of a button. In addition to lessons based off the curriculum directly, pyLearner also offers slightly broader coding challenges similar to the sort of questions asked on class exams, to help students better prepare with the ease of mind that they're on the right track.</div>
+
+</body>
