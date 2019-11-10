@@ -13,20 +13,20 @@
   }
 </style>
 <html>
-  <body style="margin: auto">
-    <script> 
-      $(function(){
-        $("#navbar").load("navbar.html"); 
-      });
-    </script> 
-    <div id="navbar"></div>
-    <script> 
-      $(function(){
-        $("#problem").load("../server/Lesson1/04.html"); 
-      });
-    </script> 
-
-    <div id="problem" style="width:80%; margin:0 auto"></div>
+    <body style="margin: auto">
+      <script> 
+        $(() => {
+          $("#navbar").load("navbar.html"); 
+        });
+      </script> 
+      <div id="navbar"></div>
+      <script> 
+        $(() => {
+          $("#problem").load("../server/Lesson1/05.html"); 
+        });
+      </script> 
+  
+      <div id="problem" name="p4" style="width:80%; margin:0 auto"></div>
 
     <textarea id="pythonCode" name="pythonCode">def absMax(x, y, z):</textarea>
 

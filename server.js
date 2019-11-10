@@ -19,10 +19,10 @@ app.use((req, res, next) => {
 
 app.post('/code', async (req, res) => {
   try {
-    var code = req.body.code;
-    console.log(code)
+    var code = req.body;
+    console.log(code.code)
 
-    fs.writeFile('test.py', code, (err) => {
+    fs.writeFile(`submissions/test_${code.problem}.py`, code.code, (err) => {
       if (err) {
          return console.error(err);
       } else {

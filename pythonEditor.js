@@ -14,9 +14,9 @@ createEditor()
 $(() => {
   $("#submitCode").click(()=>{
     window.myCodeMirror.save()
-    var code = { code: window.myCodeMirror.getValue() }
+    var code = { problem: $("#problem").attr("name") , code: window.myCodeMirror.getValue() }
     postCode(code)
-    console.log(code.code)
+    console.log(code)
   })
 })
 
