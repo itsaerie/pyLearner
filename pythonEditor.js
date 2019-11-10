@@ -21,8 +21,5 @@ $(() => {
 })
 
 postCode = (code) => {
-  // Local
   $.post('http://localhost:3000/code', code)
 }
-
-
