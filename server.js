@@ -5,12 +5,13 @@ var io = require('socket.io')(http)
 var fs = require('fs');
 
 var app = express();
-var PORT = 3000;
+var PORT = 10000;
 
 app.get('/', (req, res) => {
-  res.send('hello world')
+  res.send('404 Error: page not found')
 })
 
+app.use(express.static(__dirname))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use((req, res, next) => {
