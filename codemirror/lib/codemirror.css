@@ -2,11 +2,11 @@
 
 
 .CodeMirror {
-  /* Set height, width, borders, and global font properties here */
+  position: absolute;
+  margin: 0 auto;
   font-family: 'Inconsolata', monospace;
   height: 500px;
-  max-width:1200px;
-  width: 100%;
+  width: 80%;
   color: black;
   direction: ltr;
   font-size: 20px;
