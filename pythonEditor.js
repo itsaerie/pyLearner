@@ -8,6 +8,8 @@ const createEditor = () => {
     smartIndent: false,
     electricTabs: false,
   })
+  $("#solution").hide()
+  $("#results").hide()
 }
 createEditor()
 
@@ -15,6 +17,8 @@ $(() => {
   $("#submitCode").click(()=>{
     window.myCodeMirror.save()
     var code = { problem: $("#problem").attr("name") , code: window.myCodeMirror.getValue() }
+    $("#solution").show()
+    $("#results").show()
     postCode(code)
     console.log(code)
   })
