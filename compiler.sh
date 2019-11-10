@@ -8,7 +8,7 @@ touch output.txt
 touch errors.txt
 
 # initialize array for all files within testCases
-testArr=$(ls testCases/*)
+testArr=$(ls server/testcases/*)
 fullArr=${#testArr[@]}
 testArr=$(($fullArr/2))
 fname=$testDiff.txt

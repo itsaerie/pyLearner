@@ -2,12 +2,13 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var http = require('http').Server(app)
 var io = require('socket.io')(http)
-var fs = require('fs');
+var fs = require('fs')
+var shelljs = require('shelljs')
 
 var app = express();
 var PORT = 10000;
 
-app.use('/', express.static(__dirname + "/public"))
+app.use('/', express.static(__dirname))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use((req, res, next) => {
@@ -21,12 +22,15 @@ app.use((req, res, next) => {
 app.post('/code', async (req, res) => {
   try {
     var code = req.body
-    var file = `server/submissions/test_${code.problem}.py`
+    var file = `server/submissions/${code.lesson}/test_${code.problem}.py`
     fs.writeFile(file, code.code, (err) => {
       if (err) {
          return console.error(err);
       } else {
         console.log("Write Successful")
+        // $1 = filename $2 = lesson directory
+        var script = `bash compiler.sh ${file} ${code.lesson}`
+        shelljs.exec(script)
       }
     });
     res.sendStatus(200)
