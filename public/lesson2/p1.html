@@ -13,7 +13,7 @@
   }
 </style>
 <html>
-  <body style="margin: auto" id="lesson" name="lesson1">
+  <body style="margin: auto" id="lesson" name="lesson2">
     <script> 
       $(() => {
         $("#navbar").load("../navbar.html"); 
@@ -22,18 +22,18 @@
     <div id="navbar"></div>
     <script> 
       $(() => {
-        $("#problem").load("../../server/Lesson1/p5.html"); 
+        $("#problem").load("../../server/Lesson2/p1.html"); 
       });
     </script> 
 
-    <div id="problem" name="p5" style="width:80%; margin:0 auto"></div>
+    <div id="problem" name="p1" style="width:80%; margin:0 auto"></div>
 
-    <textarea id="pythonCode" name="pythonCode">def compare(x, y):</textarea>
+    <textarea id="pythonCode" name="pythonCode">def listDouble(items):</textarea>
 
     <div class="content" style="text-align: center">
       <br><br>
       <button class="btn btn-success" id="submitCode">Submit</button>
     </div>
     <script src="../../pythonEditor.js"></script>
-  </body> 
+  </body>
 </html>
