@@ -8,14 +8,13 @@ do
 	while read line
 	do
 		arr=( $line )
-		touch wtf
-		echo $f >> "wtf"
-		out="output$(cut -c6- wtf)"
-		echo -n "" > "$out"
-		python3 sol.py ${arr[0]} ${arr[1]} ${arr[2]} >> "$out"
-		rm wtf
-	done < temp	
+		echo $f > "repl"
+		out="output$(cut -c6- repl)"
+		python3 sol.py ${arr[0]} ${arr[1]} ${arr[2]} > "$out"
+		
+	done < temp
 	
 done
 
+rm repl
 rm temp
