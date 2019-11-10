@@ -1,13 +1,13 @@
 import sys
 def getDivergent(words):
-	divCount = 0
-	nonCount = 0
+	dCount = 0
+	nCount = 0
 	for word in words:
 		if word[0] == word[-1]:
-			divCount += 1
+			dCount += 1
 		else:
-			nonCount += 1
-	print((divCount, nonCount))
+			nCount += 1
+	print((dCount,nCount))
 
 eval(sys.argv[1].strip())
 
