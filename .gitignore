@@ -1,7 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *$py.class
-submissions/test_*.py
+server/submissions/test*
 
 # C extensions
 *.so

@@ -21,5 +21,5 @@ $(() => {
 })
 
 postCode = (code) => {
-  $.post('http://localhost:3000/code', code)
+  $.post('http://localhost:10000/code', code)
 }
