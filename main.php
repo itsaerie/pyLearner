@@ -15,48 +15,27 @@
 }
 </style>
 <html>
-<nav class="navbar navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1">Navbar</span>
-</nav>
-<body style="max-width:100%; margin: auto">
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Navbar</span>
+  </nav>
+  <body style="max-width:100%; margin: auto">
 
+    <div class="content" id="content">
+      <h1>pyLearner</h1>
+      <form name="editor" method="POST" action="main.php">
+        <textarea id="pythonCode" name="pythonCode"></textarea>
+        <input class="btn btn-success" type="submit" id="submitCode" name="submitCode" value="Submit" onclick="save()">
+      </form>
+    </div>
 
-<div class="content" style="text-align: center">
-	<h1>pyLearner</h1>
-	<div id="stuff"></div>
-</div>
+  <script src="pythonEditor.js"></script>
 
-<textarea id="hello">hello</textarea>
+  <?php
+    if(isset($_POST['pythonCode'])) {
+      $pythonCode = $_POST["pythonCode"];
+      file_put_contents("test.py", $pythonCode));
+    }
+  ?>
 
-<script>
-var myCodeMirror;
-function myFunction() {
-	window.myCodeMirror = CodeMirror.fromTextArea(document.getElementById("hello"), {
-	  mode: "python",
-	  indentUnit: "4",
-	  lineNumbers: true,
-	  indentWithTabs: true,
-	  smartIndent: false,
-	  electricTabs: false,
-	});
-
-}
-function save(){
-	window.myCodeMirror.save();
-	document.getElementById("hello").innerHTML = window.myCodeMirror.getValue();
-	alert(document.getElementById("hello").innerHTML);
-}
-
-myFunction();
-</script>
-
-<?php
-?>
-
-<div class="content" style="text-align: center">
-	<br><br>
-	<button onclick="save()" class="btn btn-success">Try it</button>
-</div>
-
-</body>
+  </body>
 </html>
