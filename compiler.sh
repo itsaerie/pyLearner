@@ -27,4 +27,4 @@ do
   fi
 done
 
-echo "correct "$correct"/"$halfArr > server/submissions/$2/answers
+echo "Test Cases Passed: $correct/$halfArr" > server/submissions/$2/answers
