@@ -21,11 +21,8 @@ $(() => {
 })
 
 postCode = (code) => {
-  // Live
-  $.post('http://104.211.7.172:3000/code', code)
   // Local
-  // $.post('http://localhost:3000/code', code)
-
+  $.post('http://localhost:3000/code', code)
 }
 
 
