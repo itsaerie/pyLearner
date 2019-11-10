@@ -1,9 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *$py.class
-server/submissions/lesson1/*
-server/submissions/lesson2/*
-server/submissions/lesson3/*
+server/submissions/lesson1/*.py
+server/submissions/lesson2/*.py
+server/submissions/lesson3/*.py
 
 # C extensions
 *.so
