@@ -22,7 +22,7 @@ app.post('/code', async (req, res) => {
     var code = req.body;
     console.log(code.code)
 
-    fs.writeFile(`submissions/test_${code.problem}.py`, code.code, (err) => {
+    fs.writeFile(`server/submissions/test_${code.problem}.py`, code.code, (err) => {
       if (err) {
          return console.error(err);
       } else {
