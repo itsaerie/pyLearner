@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ensure test.py can run
-chmod 777 test.py
+chmod 777 $1
 
 # create files
 touch output.txt
@@ -20,7 +20,7 @@ do
 	# for every element
 	j=$(($i+$halfArr))
 	# send output to output.txt and errors.txt
-	python3 test.py ${testArr[$i]} >> output.txt 2&>errors.txt
+	python3 $1 ${testArr[$i]} >> output.txt 2&>errors.txt
 	truth=$(echo "$(ls -s output)" | head -c1)
 	((correct+=truth))
 done
