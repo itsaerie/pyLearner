@@ -7,11 +7,7 @@ var fs = require('fs');
 var app = express();
 var PORT = 10000;
 
-app.get('/', (req, res) => {
-  res.send('404 Error: page not found')
-})
-
-app.use(express.static(__dirname))
+app.use('/', express.static(__dirname + "/public"))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use((req, res, next) => {
@@ -24,8 +20,9 @@ app.use((req, res, next) => {
 
 app.post('/code', async (req, res) => {
   try {
-    var code = req.body;
-    fs.writeFile(`server/submissions/test_${code.problem}.py`, code.code, (err) => {
+    var code = req.body
+    var file = `server/submissions/test_${code.problem}.py`
+    fs.writeFile(file, code.code, (err) => {
       if (err) {
          return console.error(err);
       } else {
