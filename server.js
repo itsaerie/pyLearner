@@ -7,7 +7,7 @@ var fs = require('fs');
 var app = express();
 var PORT = 3000;
 
-app.use(express.static(__dirname))
+app.use("/",express.static(path.join(__dirname), "/public"))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use((req, res, next) => {
@@ -39,6 +39,6 @@ app.post('/code', async (req, res) => {
   }
 })
 
-app.listen(PORT, function() {
-  console.log('Server PORT:', PORT);
+app.listen(PORT, () => {
+  console.log('Server PORT:', PORT)
 });
