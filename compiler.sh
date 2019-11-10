@@ -3,19 +3,15 @@
 # input is:
 #  filename (problem number.py)
 #  lesson directory
-chmod 777 $1
+file="server/submissions/$2/$1.py`
+chmod 777 $file
 
 # create files
 touch output.txt
 touch errors.txt
 
-# declare problem number
-searchstring=".txt"
-index=${$1#*$searchstring}
-problem=$(echo "$1" | cut -d'.' -f 0)
-
 # initialize array for all files within testcases
-testArr=$(ls server/testcases/$2/$problem/*)
+testArr=$(server/testcases/$2/$1/*)
 fullArr=${#testArr[@]}
 halfArr=$(($fullArr/2))
 fname=$testDiff.txt
@@ -27,7 +23,7 @@ do
 	# for every element
 	j=$(($i+$halfArr))
 	# send output to output.txt and errors.txt
-	python3 $1 ${testArr[$i]} >> output.txt 2&>errors.txt
+	python3 $file ${testArr[$i]} >> output.txt 2 &>errors.txt
 	truth=$(echo "$(ls -s output)" | head -c1)
 	((correct+=truth))
 done

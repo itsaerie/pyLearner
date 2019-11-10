@@ -29,7 +29,7 @@ app.post('/code', async (req, res) => {
       } else {
         console.log("Write Successful")
         // $1 = filename $2 = lesson directory
-        var script = `bash compiler.sh ${file} ${code.lesson}`
+        var script = `bash compiler.sh ${code.problem} ${code.lesson}`
         shelljs.exec(script)
       }
     });
