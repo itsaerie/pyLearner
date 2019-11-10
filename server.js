@@ -7,6 +7,10 @@ var fs = require('fs');
 var app = express();
 var PORT = 3000;
 
+app.get('/', (req, res) => {
+  res.send('hello world')
+})
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use((req, res, next) => {
@@ -20,8 +24,6 @@ app.use((req, res, next) => {
 app.post('/code', async (req, res) => {
   try {
     var code = req.body;
-    console.log(code.code)
-
     fs.writeFile(`server/submissions/test_${code.problem}.py`, code.code, (err) => {
       if (err) {
          return console.error(err);
