@@ -1,0 +1,1 @@
+concatIn('a', 'b', 'abba')

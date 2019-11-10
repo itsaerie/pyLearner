@@ -1,9 +1,14 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *$py.class
+
+# User Submissions
 server/submissions/lesson1/*.py
 server/submissions/lesson2/*.py
-server/submissions/lesson3/*.py
+server/submissions/midterm1/*.py
+server/submissions/lesson1/answers
+server/submissions/lesson2/answers
+server/submissions/midterm1/answers
 
 # C extensions
 *.so
