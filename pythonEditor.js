@@ -1,5 +1,4 @@
-var myCodeMirror;
-
+var myCodeMirror
 const createEditor = () => {
   window.myCodeMirror = CodeMirror.fromTextArea(document.getElementById("pythonCode"), {
     mode: "python",
@@ -8,12 +7,21 @@ const createEditor = () => {
     indentWithTabs: true,
     smartIndent: false,
     electricTabs: false,
-  });
+  })
+}
+createEditor()
+
+$(() => {
+  $("#submitCode").click(()=>{
+    window.myCodeMirror.save()
+    var code = { code: window.myCodeMirror.getValue() }
+    postCode(code)
+    // console.log(window.myCodeMirror.getValue())
+  })
+})
+
+postCode = (code) => {
+  $.post('http://localhost:3000/code', code)
 }
 
-const save = () => {
-  window.myCodeMirror.save();
-  document.getElementById("pythonCode").innerHTML = window.myCodeMirror.getValue();
-};
 
-createEditor();
