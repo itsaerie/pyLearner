@@ -1,0 +1,13 @@
+<h2>Lesson 6: Right and Wrong?</h2>
+<p>Booleans don't exist solely in the world of mathematical logic. Booleans also have their own special logical operators that apply only between themselves. You might know these better than you realize - they are <code>and</code>, <code>or</code>, and <code>not</code>. Some of these operators require two booleans, one on either side of them, and return just one that is the result of the operation. The <code>and</code> operator only returns <code>True</code> if both sides are true; the <code>or</code> operator returns <code>True</code> if either or both sides are true; the <code>not</code> operator, on the other hand does not require two booleans because all it does is invert the value of whatever follows. For example, the following:</p>
+<p><code>not True and not False</code></p>
+<p>can be simplified first into <code>False and True</code>, which overall is <code>False</code> because the <code>and</code> operator only returns <code>True</code> when both sides are true.</p>
+<p>Since arithmetic comparisons also simplify into booleans, they can be used with boolean operators too. For example, the expression:</p>
+<p><code>1 == 1 or 5 &lt; 2</code></p>
+<p>is <code>True</code> because the operator involved was <code>or</code> and at least one of the sides simplified into <code>True</code>.</p>
+<h2>Task</h2>
+<p>Write a function <code>logic</code> that accepts one boolean and two integers <code>a</code>, <code>x</code>, and <code>y</code>, and prints the boolean result of inverting <code>a</code> and using the <code>and</code> operator between the inverted <code>a</code> and whether or not <code>x</code> and <code>y</code> are equal to each other.</p>
+<h4>Sample Input 0</h4>
+<p><code>logic(False, 5, 5)</code></p>
+<h4>Sample Output 0</h4>
+<p><code>True</code></p>
