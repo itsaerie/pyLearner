@@ -9,42 +9,32 @@
 <script src="codemirror/mode/python/python.js"></script>
 
 <style>
-.content {
-  margin: auto;
-}
+  .content {
+    margin: auto;
+  }
 </style>
 <html>
-<body style="margin: auto">
-	<script> 
-	  $(function(){
-	    $("#navbar").load("navbar.html"); 
-	  });
-	</script> 
-	<div id="navbar"></div>
-	<script> 
-	  $(function(){
-	    $("#problem").load("server/Lesson1/01.html"); 
-	  });
-	</script> 
+  <body style="margin: auto">
+    <script> 
+      $(function(){
+        $("#navbar").load("navbar.html"); 
+      });
+    </script> 
+    <div id="navbar"></div>
+    <script> 
+      $(function(){
+        $("#problem").load("server/Lesson1/01.html"); 
+      });
+    </script> 
 
-<<<<<<< HEAD:main.html
-    <div class="content" id="content">
-      <h1>pyLearner</h1>
-      <textarea id="pythonCode" name="pythonCode"></textarea>
+    <div id="problem" style="width:80%; margin:0 auto"></div>
+
+    <textarea id="pythonCode" name="pythonCode">def sayHello():</textarea>
+
+    <div class="content" style="text-align: center">
+      <br><br>
       <button class="btn btn-success" id="submitCode">Submit</button>
-    </div>    
+    </div>
     <script src="pythonEditor.js"></script>
-=======
-	<div id="problem" style="width:80%; margin:0 auto">
-	</div>
-
-	<textarea id="pythonCode" name="pythonCode">def sayHello():</textarea>
->>>>>>> 03a4106634230372b64524d1ba69338e9c484852:p1.html
-
-	<div class="content" style="text-align: center">
-	  <br><br>
-	  <button class="btn btn-success" id="submitCode">Submit</button>
-	</div>
-	<script src="pythonEditor.js"></script>
-</body>
+  </body>
 </html>

@@ -8,44 +8,39 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4xxIM+B07jRM" crossorigin="anonymous"></script>
 <script src="codemirror/mode/python/python.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<script>
-</script>
 <style>
-.content {
-  margin: auto;
-}
-.rounded {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-radius: 20px;
-  border: 2px gray solid;
-  box-shadow: 4px 4px;
-  margin: 20px;
-}
+  .content {
+    margin: auto;
+  }
+  .rounded {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    border: 2px gray solid;
+    box-shadow: 4px 4px;
+    margin: 20px;
+  }
 </style>
 <html>
-<body style="margin:0 auto">
+  <body style="margin:0 auto">
+    <script> 
+      $(function(){
+        $("#navbar").load("navbar.html"); 
+      });
+    </script> 
 
-<script> 
-  $(function(){
-    $("#navbar").load("navbar.html"); 
-  });
-</script> 
+    <div id="navbar"></div>
 
-<div id="navbar"></div>
-
-<div style="width:80%; margin: 0 auto">
-  <br><br>
-  <div class="rounded" style="padding: 40px">
-    <h3 class="display-4">Lesson 1</h3>
-    <h3><a href="p1.html">Hello World!</a> - Writing your very first line of code</h3>
-    <h3><a href="p2.html">Basic Arithmetic Operators</a> - Some basic arithmetic operators you can use on numbers in Python</h3>
-    <h3><a href="p3.html">Advanced Arithmetic Operators</a> - More advanced arithmetic operators in Python</h3>
-    <h3><a href="p4.html">Ceiling and Floors</a> - Learn about the ceiling and floor functions</h3>
-    <h3><a href="p5.html">Boolean Type</a> - See how you can create conditionals that will test if a statement is true or false</h3>
-  </div>
-</div>
-
-</body>
+    <div style="width:80%; margin: 0 auto">
+      <br><br>
+      <div class="rounded" style="padding: 40px">
+        <h3 class="display-4">Lesson 1</h3>
+        <h3><a href="p1.html">Hello World!</a> - Writing your very first line of code</h3>
+        <h3><a href="p2.html">Basic Arithmetic Operators</a> - Some basic arithmetic operators you can use on numbers in Python</h3>
+        <h3><a href="p3.html">Advanced Arithmetic Operators</a> - More advanced arithmetic operators in Python</h3>
+        <h3><a href="p4.html">Ceiling and Floors</a> - Learn about the ceiling and floor functions</h3>
+        <h3><a href="p5.html">Boolean Type</a> - See how you can create conditionals that will test if a statement is true or false</h3>
+      </div>
+    </div>
+  </body>
 </html>
