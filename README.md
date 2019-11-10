@@ -5,6 +5,7 @@ so that students can familiarize themselves with problem solving when given limi
 functionality.
 
 Local Deployment:
+
 Requirements: node.js and npm
 
 Run 'npm install' to install the required dependancies followed by 'npm start' to start the server file under local host with the port 10000
