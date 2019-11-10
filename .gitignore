@@ -10,6 +10,10 @@ server/submissions/lesson1/answers
 server/submissions/lesson2/answers
 server/submissions/midterm1/answers
 
+# Test Case Generation
+generate.sh
+sol.py
+
 # C extensions
 *.so
 
