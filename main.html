@@ -9,33 +9,25 @@
 <script src="codemirror/mode/python/python.js"></script>
 
 <style>
-.content {
-  margin: auto;
-}
+  .content {
+    margin: auto;
+  }
 </style>
 <html>
-<body style="margin: auto">
-	<script> 
-	  $(function(){
-	    $("#navbar").load("navbar.html"); 
-	  });
-	</script> 
-	<div id="navbar"></div>
-	<script> 
-	  $(function(){
-	    $("#problem").load("server/Lesson1/01.html"); 
-	  });
-	</script> 
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Navbar</span>
+  </nav>
+  <body style="max-width:100%; margin: auto">
 
-	<div id="problem" style="width:80%; margin:0 auto">
-	</div>
+    <div class="content" id="content">
+      <h1>pyLearner</h1>
+      <textarea id="pythonCode" name="pythonCode"></textarea>
+      <button class="btn btn-success" id="submitCode">Submit</button>
+    </div>    
+    <script src="pythonEditor.js"></script>
+    <script>
 
-	<textarea id="pythonCode" name="pythonCode">def sayHello():</textarea>
+    </script>
 
-	<div class="content" style="text-align: center">
-	  <br><br>
-	  <button class="btn btn-success" id="submitCode">Submit</button>
-	</div>
-	<script src="pythonEditor.js"></script>
-</body>
+  </body>
 </html>
