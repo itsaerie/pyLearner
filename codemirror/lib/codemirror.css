@@ -1,9 +1,11 @@
 /* BASICS */
 
+
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: Inconsolata;
+  font-family: 'Inconsolata', monospace;
   height: 500px;
+  max-width:1200px;
   width: 100%;
   color: black;
   direction: ltr;
