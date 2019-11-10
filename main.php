@@ -22,16 +22,16 @@
       <h1>pyLearner</h1>
       <form name="editor" method="POST" action="main.php">
         <textarea id="pythonCode" name="pythonCode"></textarea>
-        <input class="btn btn-success" type="submit" id="submitCode" name="submitCode" value="Submit" onclick="save()">
+        <input class="btn btn-success" id="submitCode" name="submitCode" value="Submit" onclick="save()">
       </form>
     </div>
 
-  <script src="codeToPyFile.js"></script>
+  <script src="pythonEditor.js"></script>
 
   <?php
     if(isset($_POST['pythonCode'])) {
       $pythonCode = $_POST["pythonCode"];
-      file_put_contents("test.py", $pythonCode);
+      file_put_contents("test.py", $pythonCode));
     }
   ?>
 

@@ -1,5 +1,6 @@
 var myCodeMirror;
-function createEditor() {
+
+const createEditor = () => {
   window.myCodeMirror = CodeMirror.fromTextArea(document.getElementById("pythonCode"), {
     mode: "python",
     indentUnit: "4",
@@ -9,8 +10,10 @@ function createEditor() {
     electricTabs: false,
   });
 }
-function save(){
+
+const save = () => {
   window.myCodeMirror.save();
   document.getElementById("pythonCode").innerHTML = window.myCodeMirror.getValue();
-}
+};
+
 createEditor();
