@@ -6,6 +6,7 @@ functionality.
 
 Local Deployment:
 Requirements: node.js and npm
+
 Run 'npm install' to install the required dependancies followed by 'npm start' to start the server file under local host with the port 10000
 
 Written primarily in Javascript.
